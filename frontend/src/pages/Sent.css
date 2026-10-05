@@ -1,0 +1,123 @@
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #DEE791;
+  height: 100vh;
+  overflow: hidden; /* prevent page scroll, only scroll main area */
+}
+
+/* Container with sidebar and main content */
+.container {
+  display: flex;       /* sidebar left, main right */
+  height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 200px;
+  background: #A3DC9A;
+  color: black;
+  padding: 20px;
+  font-weight: bold;
+  flex-shrink: 0;       /* keep fixed width */
+  height: 100vh;
+  position: fixed;      /* sidebar fixed */
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+
+/* Brand/title in sidebar */
+.brand {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Sidebar buttons */
+.btn {
+  display: block;
+  width: 80%;
+  margin: 10px 0;
+  padding: 20px;
+  border: none;
+  background: #3E5F44;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  transition: background 0.3s;
+  
+}
+
+.btn:hover {
+  background: #748DAE;
+}
+
+/* Main content area */
+.main {
+  margin-left: 200px;       /* leave space for fixed sidebar */
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;         /* vertical scroll */
+  box-sizing: border-box;
+  display: block;           /* emails stack vertically */
+}
+
+/* Email card styling */
+.email {
+  background: bisque;
+  padding: 15px;
+  margin: 10px 0;       /* vertical spacing between emails */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Email details */
+.email .to {
+  font-weight: bold;
+}
+
+.email .subject {
+  color: #444;
+  margin-top: 5px;
+}
+
+.email .body {
+  margin-top: 10px;
+}
+
+.email .date {
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* stack sidebar on top */
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .main {
+    margin-left: 0;
+    height: calc(100vh - 200px); /* approximate height after sidebar */
+    padding: 15px;
+  }
+
+  .btn {
+    padding: 15px;
+    font-size: 14px;
+  }
+}

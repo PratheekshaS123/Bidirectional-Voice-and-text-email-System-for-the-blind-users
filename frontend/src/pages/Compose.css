@@ -1,0 +1,147 @@
+/* Whole page layout */
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #FFD66B; /* bright golden background */
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  background-color: #E9E294; /* your chosen sidebar color */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Buttons */
+.menu button {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #48B3AF; /* teal */
+  color: white;
+  font-size: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu button:hover {
+  background-color: #3a9692;
+  transform: scale(1.05);
+}
+
+/* Folders Section */
+.folders {
+  margin-top: auto;
+}
+
+.folders h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.folders button {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background-color: #48B3AF;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.folders button:hover {
+  background-color: #3a9692;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  padding: 20px;
+  position: relative;
+}
+
+/* Compose Box */
+.compose-box {
+  background-color: #FFF4B0; /* soft pale yellow */
+  padding: 25px;
+  border-radius: 10px;
+  width: 60%;
+  max-width: 650px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centers the box perfectly */
+}
+
+/* Compose Box Heading */
+.compose-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+  border-bottom: 2px solid #48B3AF;
+  padding-bottom: 8px;
+}
+
+/* Input Fields */
+.compose-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #222;
+}
+
+.compose-box input,
+.compose-box textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fff;
+  color: #333;
+}
+
+.compose-box textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Send Button */
+.compose-box button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #48B3AF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.compose-box button:hover {
+  background-color: #3a9692;
+}
+

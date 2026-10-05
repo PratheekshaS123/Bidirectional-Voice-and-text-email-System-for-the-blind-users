@@ -1,0 +1,162 @@
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f9f7e8;
+}
+
+/* 📦 Layout */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* 📋 Sidebar */
+.sidebar {
+  width: 200px;
+  background-color: #A3DC9A;
+  color: #000;
+  padding: 20px;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  font-size: 22px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  color: #fff;
+  background-color: lightcoral;
+  padding-left: 15px;
+}
+
+/* 📨 Main Content */
+.main {
+  flex: 1;
+  background: #F2AEBB;
+  padding: 40px;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.inbox-heading {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* ✉️ Email List */
+.email-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email-item {
+  width: 90%;
+  background: #FFF2EF;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 12px;
+  text-align: left;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.email-item:hover {
+  border-color: #a9c46c;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+}
+
+/* 🟩 Read / 🟧 Unread */
+.email-item.read {
+  background-color: #e6ffe6;
+  border-left: 6px solid #4caf50;
+}
+
+.email-item.unread {
+  background-color: #fff8e1;
+  border-left: 6px solid #ff9800;
+}
+
+.read-mark {
+  color: green;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* 🎤 Microphone animation */
+.mic-animation {
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(circle, #ff4b4b 0%, #d11a1a 100%);
+  border-radius: 50%;
+  margin: 40px auto 10px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* 🔊 Pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+}
+
+/* 🎧 Status text */
+p {
+  font-size: 18px;
+  color: #222;
+}
+
+/* ✅ Scrollbar */
+.main::-webkit-scrollbar {
+  width: 10px;
+}
+.main::-webkit-scrollbar-thumb {
+  background-color: #a9c46c;
+  border-radius: 10px;
+}
+.main::-webkit-scrollbar-thumb:hover {
+  background-color: #7a9a3d;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    text-align: center;
+  }
+  .email-item {
+    width: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+.help-page {
+  padding: 20px;
+}
+
+.help-title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.help-box {
+  background: #C1E59F;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.help-list {
+  list-style: none;
+  padding: 0;
+}
+
+.help-list li {
+  font-size: 18px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.help-list .emoji {
+  font-size: 1.6rem;
+  margin-right: 10px;
+}

@@ -1,0 +1,167 @@
+
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 500px;
+  background: #689b8a;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
+}
+.brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+.nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  gap: 4px;
+}
+.nav::-webkit-scrollbar {
+  width: 6px;
+}
+.nav::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+.btn {
+  background: none;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  color: lightgray;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.btn:hover,
+.btn.active {
+  background: #334155;
+  color: #fff;
+  transform: translateX(4px);
+}
+.footer {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* Main Content */
+.content {
+  margin-left: 300px;
+  padding: 20px;
+  text-align: center;
+}
+.center-message {
+  margin-top: 80px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0d1164;
+}
+
+/* 🎙️ Microphone Pulse Animation */
+.mic-pulse {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.mic-icon {
+  font-size: 60px;
+  color: crimson;
+  animation: micPulse 1.3s infinite;
+}
+@keyframes micPulse {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    transform: scale(1.2);
+    text-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+  }
+}
+
+/* 🗣️ Voice Wave (Speaking) */
+.voice-wave {
+  display: none;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 6px;
+  height: 60px;
+  margin-top: 20px;
+}
+.voice-wave span {
+  width: 6px;
+  height: 20px;
+  background-color: #ff0066;
+  border-radius: 4px;
+  animation: wave 1s infinite ease-in-out;
+}
+.voice-wave span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.voice-wave span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.voice-wave span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.voice-wave span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+@keyframes wave {
+  0%, 100% {
+    height: 20px;
+  }
+  50% {
+    height: 50px;
+  }
+}
+
+/* ✨ Status Text Fade-in */
+.status-text {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  color: #0d1164;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 240px;
+  }
+  .btn {
+    font-size: 0.5rem;
+  }
+  .content {
+    margin-left: 240px;
+  }
+}
+
